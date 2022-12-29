@@ -18,6 +18,6 @@ To make it a bit trickier , my mentor and I decided to add some animation to the
 - [ ] Add a frame for the picture
 
 ## Credits and acknowledgments
-First of all I want to say thank you for my mentor who reviews my numerous app ideas and push requests - [@ togramago](https://github.com/togramago).
+First of all I want to say thank you for my mentor who reviews my numerous app ideas and push requests - [@togramago](https://github.com/togramago).
 
 I’m planning to use [Code with Enid](https://twitter.com/ios_dev_alb) as a reference material for this project and follow some of the steps in [@SwiftfulThinking](https://www.youtube.com/@SwiftfulThinking) guides on Youtube. I will add details as it goes.
