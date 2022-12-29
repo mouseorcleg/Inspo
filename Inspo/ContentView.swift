@@ -16,15 +16,16 @@ struct ContentView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 300)
             ZStack{
-                Circle()
-                    .fill(.orange)
-                    .frame(width: 300, height: 100)
+                Color("AccentColor")
                     .scaledToFit()
+                    .frame(width: 300, height: 100)
+                    .clipShape(Circle())
                 Text("Pull for inspo")
                     .font(.title3)
             }
             
         }
+//        .background()
         .padding()
     }
 }
