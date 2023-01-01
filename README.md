@@ -9,13 +9,16 @@ To make it a bit trickier , my mentor and I decided to add some animation to the
 ## To do list
 - [x] Create a new project on GitHub
 - [x] Write a ReadMe
-- [ ] Create an MVVM structure
-- [ ] Create a basic layout
+- [x] Create a basic layout
 - [ ] Create a beautiful button
 - [ ] Add button animation
 - [ ] Add API request logic
 - [ ] Test the app
 - [ ] Add a frame for the picture
+
+## How the project looks like now
+
+<img width="634" alt="Screenshot 2023-01-01 at 18 08 28" src="https://user-images.githubusercontent.com/45575272/210180717-e14070eb-92ff-40ac-835c-699b0447b82b.png">
 
 ## Credits and acknowledgments
 First of all I want to say thank you for my mentor who reviews my numerous app ideas and push requests - [@togramago](https://github.com/togramago).
