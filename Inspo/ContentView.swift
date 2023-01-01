@@ -9,24 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image("frame_placeholder")
-                .resizable()
-                .scaledToFit()
-                .aspectRatio(contentMode: .fit)
-                .frame(height: 300)
-            ZStack{
-                Color("AccentColor")
-                    .scaledToFit()
-                    .frame(width: 300, height: 100)
-                    .clipShape(Circle())
-                Text("Pull for inspo")
-                    .font(.title3)
-            }
+        ZStack {
+            Color.theme.background
+                .ignoresSafeArea()
             
+            VStack {
+                Image("frame_placeholder")
+                    .resizable()
+                    .scaledToFit()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 300)
+                ZStack{
+                    Color.theme.accent
+                        .scaledToFit()
+                        .frame(height: 150)
+                        .clipShape(Circle())
+                    Text("Pull for inspo")
+                        .font(.title3)
+                }
+                
+            }
+            .padding()
         }
-//        .background()
-        .padding()
     }
 }
 
