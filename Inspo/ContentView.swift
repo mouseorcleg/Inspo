@@ -14,7 +14,7 @@ struct ContentView: View {
                 .ignoresSafeArea()
             
             VStack {
-                Image("frame_placeholder")
+                Image("pictureFrame")
                     .resizable()
                     .scaledToFit()
                     .aspectRatio(contentMode: .fit)
