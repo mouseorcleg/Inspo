@@ -21,12 +21,15 @@ struct ContentView: View {
                     .resizable()
                     .scaledToFit()
                     .aspectRatio(contentMode: .fit)
-                    .rotationEffect(Angle(degrees: isRotating ? 360 : 0))
+                    .rotationEffect(Angle(degrees: isRotating ? 720 : 0))
                 
                 Spacer()
                 
                 Button {
-                    withAnimation(.default) {
+                    withAnimation(Animation
+                        .easeOut
+                        .repeatCount(1, autoreverses: true)
+                    ) {
                         isRotating.toggle()
                     }
                     
