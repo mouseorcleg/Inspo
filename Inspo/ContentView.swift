@@ -21,14 +21,20 @@ struct ContentView: View {
                     .aspectRatio(contentMode: .fit)
                 
                 Spacer()
-                ZStack{
-                    Color.theme.accent
-                        .scaledToFit()
-                        .frame(height: 150)
-                        .clipShape(Circle())
+                
+                Button {
+                    
+                } label: {
+                    ZStack{
+                        Color.theme.accent
+                            .scaledToFit()
+                            .frame(height: 150)
+                            .clipShape(Circle())
                         
-                    Text("Pull for inspo")
-                        .font(.title3)
+                        Text("Pull for inspo")
+                            .font(.title3)
+                            .foregroundColor(.primary)
+                    }
                 }
             Spacer()
             Spacer()
