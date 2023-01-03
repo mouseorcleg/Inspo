@@ -14,22 +14,26 @@ struct ContentView: View {
                 .ignoresSafeArea()
             
             VStack {
+                Spacer()
                 Image("pictureFrame")
                     .resizable()
                     .scaledToFit()
                     .aspectRatio(contentMode: .fit)
-                    .frame(height: 300)
+                
+                Spacer()
                 ZStack{
                     Color.theme.accent
                         .scaledToFit()
                         .frame(height: 150)
                         .clipShape(Circle())
+                        
                     Text("Pull for inspo")
                         .font(.title3)
                 }
-                
+            Spacer()
+            Spacer()
+            Spacer()
             }
-            .padding()
         }
     }
 }
