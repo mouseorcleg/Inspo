@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var isRotating: Bool = false
+    let timing: Double = 1.0
     
     var body: some View {
         ZStack {
@@ -21,24 +22,24 @@ struct ContentView: View {
                     .resizable()
                     .scaledToFit()
                     .aspectRatio(contentMode: .fit)
-                    .rotationEffect(Angle(degrees: isRotating ? 720 : 0))
+                    .rotationEffect(Angle(degrees: isRotating ? 540 : 0))
+//                    .offset(y: isRotating ? 100 : 0)
+                    
                 
                 Spacer()
                 
                 Button {
                     withAnimation(Animation
-                        .easeOut
-                        .repeatCount(1, autoreverses: true)
+                        .spring()
+//                        .easeInOut(duration: timing)
+//                        .spring(response: timing, dampingFraction: 0.8)
+//                        .repeatCount(1, autoreverses: true)
                     ) {
                         isRotating.toggle()
                     }
                     
                 } label: {
                     ZStack{
-//                        Color.theme.accent
-//                            .scaledToFit()
-//                            .frame(height: 150)
-//                            .clipShape(Circle())
                         Circle()
                             .fill(Color.theme.accent)
                             .frame(height: 150)
