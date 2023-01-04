@@ -24,7 +24,7 @@ class ImageService {
         return URL(string: "\(startpoint)?apikey=\(key)&fields=\(fields)&sort=random&size=1&classification=\(classification)")
     }
     
-    func getPainting(page: Int) async -> Result<ImageFromHarvard, NetworkingError> {
+    func getPainting() async -> Result<ImageFromHarvard, NetworkingError> {
         guard let url = generateURL() else {
             return .failure(NetworkingError(message: "Can't generate URL :( Sorry!"))
         }
