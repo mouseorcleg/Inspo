@@ -19,14 +19,13 @@ class ImageService {
     private let key = "610bcbb2-9178-498a-ac77-4842638ee8c5"
     private let fields = "baseimageurl,alttext"
     private var classification = "Painting"
-    private var page = 1
     
-    private func generateURL(page: Int) -> URL? {
-        return URL(string: "\(startpoint)?apikey=\(key)&fields=\(fields)&sort=random&size=1&classification=\(classification)&page=\(page)")
+    private func generateURL() -> URL? {
+        return URL(string: "\(startpoint)?apikey=\(key)&fields=\(fields)&sort=random&size=1&classification=\(classification)")
     }
     
     func getPainting(page: Int) async -> Result<ImageFromHarvard, NetworkingError> {
-        guard let url = generateURL(page: page) else {
+        guard let url = generateURL() else {
             return .failure(NetworkingError(message: "Can't generate URL :( Sorry!"))
         }
         
