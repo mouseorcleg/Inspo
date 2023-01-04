@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isRotating: Bool = false
-    let timing: Double = 1.0
+
+    @State private var rotation = 0.0
     
     var body: some View {
         ZStack {
@@ -22,20 +22,16 @@ struct ContentView: View {
                     .resizable()
                     .scaledToFit()
                     .aspectRatio(contentMode: .fit)
-                    .rotationEffect(Angle(degrees: isRotating ? 540 : 0))
-//                    .offset(y: isRotating ? 100 : 0)
-                    
+                    .rotationEffect(.degrees(rotation))
                 
                 Spacer()
                 
                 Button {
                     withAnimation(Animation
                         .spring()
-//                        .easeInOut(duration: timing)
-//                        .spring(response: timing, dampingFraction: 0.8)
-//                        .repeatCount(1, autoreverses: true)
+                        .repeatCount(1)
                     ) {
-                        isRotating.toggle()
+                        self.rotation += 360
                     }
                     
                 } label: {
