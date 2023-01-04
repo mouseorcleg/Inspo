@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
 
+    @StateObject var viewModel: ContentViewModel = ContentViewModel()
     @State private var rotation = 0.0
     
     var body: some View {
@@ -18,12 +19,20 @@ struct ContentView: View {
             
             VStack {
                 Spacer()
-                Image("pictureFrame")
-                    .resizable()
-                    .scaledToFit()
-                    .aspectRatio(contentMode: .fit)
-                    .rotationEffect(.degrees(rotation))
-                
+                AsyncImage(url: viewModel.imageURL) { returnedImage in
+                    returnedImage
+                        .resizable()
+                        .scaledToFit()
+                        .cornerRadius(20)
+                        .frame(maxWidth: 500, maxHeight: 400)
+                    
+                } placeholder: {
+                    Image("pictureFrame")
+                        .resizable()
+                        .scaledToFit()
+                        .aspectRatio(contentMode: .fit)
+                        .rotationEffect(.degrees(rotation))
+                }
                 Spacer()
                 
                 Button {

@@ -8,18 +8,14 @@
 import Foundation
 
 protocol ImageRepo {
-    func fetchImageFromRepo() async -> Result<ImageUIModel, NetworkingError>
+    func fetchPaintingFromRepo() async -> Result<ImageUIModel, NetworkingError>
 }
 
 class ImageRepository: ObservableObject, ImageRepo {
+
+    var imageService = ImageService()
     
-    private let imageService: ImageService
-    
-    init(imageService: ImageService) {
-        self.imageService = imageService
-    }
-    
-    func fetchImageFromRepo() async -> Result<ImageUIModel, NetworkingError> {
+    func fetchPaintingFromRepo() async -> Result<ImageUIModel, NetworkingError> {
         let result = await imageService.getPainting()
         switch result {
         case .success(let model):
@@ -28,6 +24,5 @@ class ImageRepository: ObservableObject, ImageRepo {
             return .failure(NetworkingError(message: "\(failure)"))
         }
     }
-    
-    
 }
+
