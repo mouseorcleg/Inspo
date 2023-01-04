@@ -32,7 +32,7 @@ class ImageService {
         do {
             let (data, response) = try await URLSession.shared.data(from: url)
             guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-                return .failure(NetworkingError(message: "Can't get data from the URL :0"))
+                return .failure(NetworkingError(message: "Can't get data from the URL"))
             }
             let model = try JSONDecoder().decode(ImageFromHarvard.self, from: data)
             return .success(model)

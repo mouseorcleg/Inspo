@@ -25,6 +25,7 @@ struct ContentView: View {
                         .scaledToFit()
                         .cornerRadius(20)
                         .frame(maxWidth: 500, maxHeight: 400)
+                        .padding(10)
                     
                 } placeholder: {
                     Image("pictureFrame")
@@ -40,6 +41,10 @@ struct ContentView: View {
                         .spring()
                         .repeatCount(1)
                     ) {
+                        Task{
+                            await viewModel.getPaintingForTheView()
+                        }
+                        
                         self.rotation += 360
                     }
                     
