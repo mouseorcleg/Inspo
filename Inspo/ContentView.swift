@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @State private var rotation = 0.0
+    
     var body: some View {
         ZStack {
             Color.theme.background
@@ -19,16 +22,31 @@ struct ContentView: View {
                     .resizable()
                     .scaledToFit()
                     .aspectRatio(contentMode: .fit)
+                    .rotationEffect(.degrees(rotation))
                 
                 Spacer()
-                ZStack{
-                    Color.theme.accent
-                        .scaledToFit()
-                        .frame(height: 150)
-                        .clipShape(Circle())
+                
+                Button {
+                    withAnimation(Animation
+                        .spring()
+                        .repeatCount(1)
+                    ) {
+                        self.rotation += 360
+                    }
+                    
+                } label: {
+                    ZStack{
+                        Circle()
+                            .fill(Color.theme.accent)
+                            .frame(height: 150)
+                            .overlay {
+                                Text("Pull for inspo")
+                                    .font(.title3)
+                                    .foregroundColor(.primary)
+                            }
                         
-                    Text("Pull for inspo")
-                        .font(.title3)
+                        
+                    }
                 }
             Spacer()
             Spacer()
