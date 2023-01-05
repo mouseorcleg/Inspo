@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @StateObject var viewModel: ContentViewModel = ContentViewModel()
     @State private var offset: CGSize = .zero
-    
+    @State private var isPulling: Bool = false
     
     var body: some View {
         
@@ -21,7 +21,9 @@ struct ContentView: View {
             
             VStack {
                 Spacer()
-                
+                if isPulling {
+                    ProgressView()
+                }
                 AsyncImage(url: viewModel.imageURL) { returnedImage in
                     returnedImage
                         .resizable()
@@ -31,7 +33,9 @@ struct ContentView: View {
                         .padding(10)
                 } placeholder: {
                     ZStack{
-                        ProgressView()
+                        if isPulling == false {
+                            ProgressView()
+                        }
                         Image("pictureFrame")
                             .resizable()
                             .scaledToFit()
@@ -55,6 +59,7 @@ struct ContentView: View {
                         .gesture(
                             DragGesture()
                                 .onChanged({ value in
+                                    isPulling = true
                                     withAnimation(Animation
                                         .spring()
                                     ) {
@@ -68,14 +73,13 @@ struct ContentView: View {
                                     }
                                 })
                                 .onEnded({ value in
+                                    isPulling = false
                                     Task {
                                         await viewModel.getPaintingForTheView()
                                     }
                                     withAnimation(.spring()) {
                                         offset = .zero
                                     }
-                                    
-                                    
                                 })
                         )
                 }
