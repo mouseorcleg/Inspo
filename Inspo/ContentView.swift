@@ -23,6 +23,7 @@ struct ContentView: View {
                 Spacer()
                 if isPulling {
                     ProgressView()
+                        .transition(AnyTransition.scale.animation(.spring()))
                 }
                 AsyncImage(url: viewModel.imageURL) { returnedImage in
                     returnedImage
@@ -73,13 +74,13 @@ struct ContentView: View {
                                     }
                                 })
                                 .onEnded({ value in
-                                    isPulling = false
                                     Task {
                                         await viewModel.getPaintingForTheView()
                                     }
                                     withAnimation(.spring()) {
                                         offset = .zero
                                     }
+                                    isPulling = false
                                 })
                         )
                 }
