@@ -15,8 +15,10 @@ class ContentViewModel: ObservableObject {
         let result = await ImageRepository().fetchPaintingFromRepo()
         switch result {
         case .success(let model):
-            self.imageURL = URL(string: model.image) ?? URL(string: "-")!
-            self.imageAltText = model.alttext
+            DispatchQueue.main.async {
+                self.imageURL = URL(string: model.image) ?? URL(string: "-")!
+                self.imageAltText = model.alttext
+            }
         case .failure(let error):
             print("error: " + error.message)
         }
