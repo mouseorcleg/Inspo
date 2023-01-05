@@ -22,26 +22,26 @@ struct ContentView: View {
             VStack {
                 Spacer()
                 
-                    AsyncImage(url: viewModel.imageURL) { returnedImage in
-                        returnedImage
+                AsyncImage(url: viewModel.imageURL) { returnedImage in
+                    returnedImage
+                        .resizable()
+                        .scaledToFit()
+                        .cornerRadius(20)
+                        .frame(maxWidth: 500, maxHeight: 400)
+                        .padding(10)
+                } placeholder: {
+                    ZStack{
+                        ProgressView()
+                        Image("pictureFrame")
                             .resizable()
                             .scaledToFit()
-                            .cornerRadius(20)
-                            .frame(maxWidth: 500, maxHeight: 400)
-                            .padding(10)
-                    } placeholder: {
-                        ZStack{
-                            ProgressView()
-                            Image("pictureFrame")
-                                .resizable()
-                                .scaledToFit()
-                                .aspectRatio(contentMode: .fit)
-                        }
+                            .aspectRatio(contentMode: .fit)
                     }
+                }
+                .offset(offset)
                 
-
                 Spacer()
-    
+                
                 ZStack{
                     Circle()
                         .fill(Color.theme.accent)
@@ -58,9 +58,6 @@ struct ContentView: View {
                                     withAnimation(Animation
                                         .spring()
                                     ) {
-                                        Task{
-                                            await viewModel.getPaintingForTheView()
-                                        }
                                         let translation = value.translation
                                         if translation.height > 0 {
                                             let verticalTranslation = min(translation.height, 200)
@@ -71,12 +68,15 @@ struct ContentView: View {
                                     }
                                 })
                                 .onEnded({ value in
-                                    withAnimation {
+                                    Task {
+                                        await viewModel.getPaintingForTheView()
+                                    }
+                                    withAnimation(.spring()) {
                                         offset = .zero
                                     }
                                     
-                        
-                            })
+                                    
+                                })
                         )
                 }
                 Spacer()
