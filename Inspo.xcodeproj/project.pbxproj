@@ -12,6 +12,7 @@
 		CB1C3AD52965CD1900F92CA7 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C3AD42965CD1900F92CA7 /* ImageService.swift */; };
 		CB1C3AD72965D28500F92CA7 /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C3AD62965D28500F92CA7 /* ImageRepository.swift */; };
 		CB1C3AD92965D66C00F92CA7 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C3AD82965D66C00F92CA7 /* ContentViewModel.swift */; };
+		CB7D59712983F1AA00FF2ECC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7D59702983F1AA00FF2ECC /* LaunchScreen.storyboard */; };
 		CBB1F3EC295DBA5A009A743A /* InspoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB1F3EB295DBA5A009A743A /* InspoApp.swift */; };
 		CBB1F3EE295DBA5A009A743A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB1F3ED295DBA5A009A743A /* ContentView.swift */; };
 		CBB1F3F0295DBA63009A743A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB1F3EF295DBA63009A743A /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		CB1C3AD42965CD1900F92CA7 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		CB1C3AD62965D28500F92CA7 /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
 		CB1C3AD82965D66C00F92CA7 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		CB7D59702983F1AA00FF2ECC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBB1F3E8295DBA5A009A743A /* Inspo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inspo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB1F3EB295DBA5A009A743A /* InspoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspoApp.swift; sourceTree = "<group>"; };
 		CBB1F3ED295DBA5A009A743A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +54,15 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		CB7D596F2983F17500FF2ECC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CB1C3AD22965C96900F92CA7 /* ImageDataModels.swift */,
+				CB1C3ACE296200B700F92CA7 /* Color.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CBB1F3DF295DBA5A009A743A = {
 			isa = PBXGroup;
 			children = (
@@ -75,9 +86,9 @@
 				CB7D596E2983F0C900FF2ECC /* Networking */,
 				CBB1F3ED295DBA5A009A743A /* ContentView.swift */,
 				CB1C3AD82965D66C00F92CA7 /* ContentViewModel.swift */,
-				CB1C3AD22965C96900F92CA7 /* ImageDataModels.swift */,
-				CB1C3ACE296200B700F92CA7 /* Color.swift */,
+				CB7D596F2983F17500FF2ECC /* Models */,
 				CBB1F3EF295DBA63009A743A /* Assets.xcassets */,
+				CB7D59702983F1AA00FF2ECC /* LaunchScreen.storyboard */,
 				CBB1F3F1295DBA63009A743A /* Inspo.entitlements */,
 				CBB1F3F2295DBA63009A743A /* Preview Content */,
 			);
@@ -150,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB7D59712983F1AA00FF2ECC /* LaunchScreen.storyboard in Resources */,
 				CBB1F3F4295DBA63009A743A /* Preview Assets.xcassets in Resources */,
 				CBB1F3F0295DBA63009A743A /* Assets.xcassets in Resources */,
 			);
@@ -226,6 +238,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -279,6 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
