@@ -12,6 +12,7 @@ struct ContentView: View {
     @StateObject var viewModel: ContentViewModel = ContentViewModel()
     @State private var offset: CGSize = .zero
     @State private var isPulling: Bool = false
+    @State private var isFirstScreen: Bool = true
     
     var body: some View {
         
