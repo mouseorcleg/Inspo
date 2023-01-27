@@ -8,87 +8,86 @@
 import SwiftUI
 
 struct ContentView: View {
-
+    
     @StateObject var viewModel: ContentViewModel = ContentViewModel()
-    @State private var rotation = 0.0
+    @State private var offset: CGSize = .zero
+    @State private var isPulling: Bool = false
     
     var body: some View {
         
-        ScrollView {
-            ZStack {
-                Color.theme.background
-                    .ignoresSafeArea()
-                
-                VStack {
-                    Spacer()
-                    AsyncImage(url: viewModel.imageURL) { returnedImage in
-                        returnedImage
-                            .resizable()
-                            .scaledToFit()
-                            .cornerRadius(20)
-                            .frame(maxWidth: 500, maxHeight: 400)
-                            .padding(10)
-                        
-                    } placeholder: {
+        ZStack {
+            Color.theme.background
+                .ignoresSafeArea()
+            
+            VStack {
+                Spacer()
+                if isPulling {
+                    ProgressView()
+                        .transition(AnyTransition.scale.animation(.spring()))
+                }
+                AsyncImage(url: viewModel.imageURL) { returnedImage in
+                    returnedImage
+                        .resizable()
+                        .scaledToFit()
+                        .cornerRadius(20)
+                        .frame(maxWidth: 500, maxHeight: 400)
+                        .padding(10)
+                } placeholder: {
+                    ZStack{
+                        if isPulling == false {
+                            ProgressView()
+                        }
                         Image("pictureFrame")
                             .resizable()
                             .scaledToFit()
                             .aspectRatio(contentMode: .fit)
-                            .rotationEffect(.degrees(rotation))
                     }
-                    Spacer()
-                    
-    //                Button {
-    //                    withAnimation(Animation
-    //                        .spring()
-    //                        .repeatCount(1)
-    //                    ) {
-    //                        Task{
-    //                            await viewModel.getPaintingForTheView()
-    //                        }
-    //
-    //                        self.rotation += 360
-    //                    }
-    //
-    //                } label: {
-    //                    ZStack{
-    //                        Circle()
-    //                            .fill(Color.theme.accent)
-    //                            .frame(height: 150)
-    //                            .overlay {
-    //                                Text("Pull for inspo")
-    //                                    .font(.title3)
-    //                                    .foregroundColor(.primary)
-    //                        }
-    //                    }
-    //                }
-                                        ZStack{
-                                            Circle()
-                                                .fill(Color.theme.accent)
-                                                .frame(height: 150)
-                                                .overlay {
-                                                    Text("Pull for inspo")
-                                                        .font(.title3)
-                                                        .foregroundColor(.primary)
+                }
+                .offset(offset)
+                
+                Spacer()
+                
+                ZStack{
+                    Circle()
+                        .fill(Color.theme.accent)
+                        .frame(height: 150)
+                        .overlay {
+                            Text("Pull for inspo")
+                                .font(.title3)
+                                .foregroundColor(.primary)
+                        }
+                        .offset(offset)
+                        .gesture(
+                            DragGesture()
+                                .onChanged({ value in
+                                    isPulling = true
+                                    withAnimation(Animation
+                                        .spring()
+                                    ) {
+                                        let translation = value.translation
+                                        if translation.height > 0 {
+                                            let verticalTranslation = min(translation.height, 200)
+                                            withAnimation(.spring()) {
+                                                offset = CGSize(width: 0, height: verticalTranslation)
                                             }
                                         }
-                Spacer()
-                Spacer()
-                Spacer()
-                }
-            }
-        }
-        .refreshable {
-            withAnimation(Animation
-                                    .spring()
-                                    .repeatCount(1)
-                                ) {
-                                    Task{
+                                    }
+                                })
+                                .onEnded({ value in
+                                    Task {
                                         await viewModel.getPaintingForTheView()
                                     }
-            
-                                    self.rotation += 360
-                                }
+                                    withAnimation(.spring()) {
+                                        offset = .zero
+                                    }
+                                    isPulling = false
+                                })
+                        )
+                }
+                Spacer()
+                Spacer()
+                Spacer()
+            }
         }
     }
 }
