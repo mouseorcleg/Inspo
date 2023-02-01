@@ -23,30 +23,30 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's find inspiration!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uU-W7-Scb">
-                                <rect key="frame" x="100.33333333333333" y="521" width="192.33333333333337" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <color key="textColor" name="ExtraColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.artframe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ku9-hr-vhQ">
-                                <rect key="frame" x="121.66666666666669" y="352.66666666666669" width="150" height="146.99999999999994"/>
-                                <color key="tintColor" name="ExtraColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InspoIconForLaunch" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ku9-hr-vhQ">
+                                <rect key="frame" x="-28.666666666666657" y="201" width="450.33333333333326" height="450"/>
+                                <color key="tintColor" name="AccentColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="KDG-gb-zz7"/>
-                                    <constraint firstAttribute="width" constant="150" id="vF2-Dd-Cdf"/>
+                                    <constraint firstAttribute="width" constant="450" id="boD-Dh-JhD"/>
+                                    <constraint firstAttribute="height" constant="450" id="t6K-xJ-tqO"/>
+                                    <constraint firstAttribute="width" secondItem="ku9-hr-vhQ" secondAttribute="height" multiplier="1:1" id="vj6-St-Reg"/>
                                 </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time to get inspired!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uU-W7-Scb">
+                                <rect key="frame" x="102.66666666666667" y="169" width="187.66666666666663" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="9" height="17"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
-                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <color key="backgroundColor" red="0.85098052020000003" green="0.85098046059999999" blue="0.85098046059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ku9-hr-vhQ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="5F6-y6-Inq"/>
-                            <constraint firstItem="ku9-hr-vhQ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="7P1-lI-HFl"/>
-                            <constraint firstItem="9uU-W7-Scb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Xrz-1j-XxQ"/>
-                            <constraint firstItem="ku9-hr-vhQ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fBE-iG-6rE"/>
-                            <constraint firstItem="ku9-hr-vhQ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="mVI-1R-qOS"/>
-                            <constraint firstItem="9uU-W7-Scb" firstAttribute="top" secondItem="ku9-hr-vhQ" secondAttribute="bottom" constant="20" id="ngj-fe-Nuq"/>
+                            <constraint firstItem="ku9-hr-vhQ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="091-do-jj3"/>
+                            <constraint firstItem="9uU-W7-Scb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="464-Pe-6Jw"/>
+                            <constraint firstItem="ku9-hr-vhQ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="WUu-9K-Bzj"/>
+                            <constraint firstItem="ku9-hr-vhQ" firstAttribute="top" secondItem="9uU-W7-Scb" secondAttribute="bottom" constant="8" id="v5Z-Oj-vGf"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -56,12 +56,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="photo.artframe" catalog="system" width="128" height="93"/>
-        <namedColor name="BackgroundColor">
-            <color red="0.87199997901916504" green="0.75400000810623169" blue="0.61900001764297485" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="ExtraColor">
-            <color red="0.26100000739097595" green="0.39599999785423279" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="InspoIconForLaunch" width="1024" height="1024"/>
+        <namedColor name="AccentColor">
+            <color red="0.87199997901916504" green="0.37599998712539673" blue="0.17499999701976776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
