@@ -25,6 +25,7 @@ struct ContentView: View {
                 if isPulling {
                     ProgressView()
                         .transition(AnyTransition.scale.animation(.spring()))
+                    Spacer()
                 }
                 AsyncImage(url: viewModel.imageURL) { returnedImage in
                     returnedImage
@@ -33,6 +34,12 @@ struct ContentView: View {
                         .cornerRadius(20)
                         .frame(maxWidth: 500, maxHeight: 400)
                         .padding(10)
+                        .onChange(of: viewModel.imageURL) { newValue in
+                            isPulling = false
+                        }
+                        .onAppear(perform: {
+                            isPulling = false
+                        })
                 } placeholder: {
                     ZStack{
                         if !isPulling && !isFirstScreen {
@@ -82,7 +89,7 @@ struct ContentView: View {
                                     withAnimation(.spring()) {
                                         offset = .zero
                                     }
-                                    isPulling = false
+//                                    isPulling = false
                                 })
                         )
                 }
