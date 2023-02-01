@@ -35,7 +35,7 @@ struct ContentView: View {
                         .padding(10)
                 } placeholder: {
                     ZStack{
-                        if isPulling == false {
+                        if !isPulling && !isFirstScreen {
                             ProgressView()
                         }
                         Image("pictureFrame")
@@ -62,6 +62,7 @@ struct ContentView: View {
                             DragGesture()
                                 .onChanged({ value in
                                     isPulling = true
+                                    isFirstScreen = false
                                     withAnimation(Animation
                                         .spring()
                                     ) {
