@@ -21,6 +21,13 @@ The current status of the app is that it is fully functional, allowing users to 
 
 However, there still is room for improvement and additional features in the future. [The Harvard Art Museum API](https://github.com/harvardartmuseums/api-docs) provides a wealth of resources, and I am eager to continue exploring the possibilities for working with images using SwiftUI.
 
+### 👩‍💻 Plans for the future updates
+
+The next update will feature the ability to request and cache a unique collection of images from the Harvard Art Museum API, creating a persistent user experience. A save and share button will also be added.
+
+📮 If you have ideas or recommendations about the features for this app - please don’t hesitate to reach out on Twitter [@mouse_or_cleg](https://twitter.com/mouse_or_cleg).
+Any feedback is highly appreciated!
+
 ## Credits and acknowledgments
 First of all I want to say thank you for my mentor who reviews my numerous app ideas and push requests - [@togramago](https://github.com/togramago).
 
