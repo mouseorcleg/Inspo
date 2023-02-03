@@ -8,6 +8,15 @@ Inspo is a simple app that provides you with a source of inspiration at your fin
 * **AsyncImage** was used for displaying the main picture and **DragGesture** was utilised to allow the user to trigger updates to the picture. 
 * The launch screen (only) was designed using **Storyboard**.
 
+## 🗺 Roadmap
+### ✈️ Start of the journey
+
+The Inspo app was created as an exercise set by my mentor to develop skills in working with images and JSON responses. The task was to find a public API, set up a networking layer, and handle the image loading within the app.
+
+As an art historian, I saw the opportunity to provide users with a unique and memorable experience of exploring artwork. By using the [Harvard Art Museum API](https://harvardartmuseums.org/collections/api), Inspo allows users to discover art without any preconceived notions or additional information, giving them the chance to form their own opinions and interpretations. Whether you are an artist seeking inspiration or simply curious about the museum’s collection, Inspo provides an stress-free way to engage with art and discover something new.
+
+Hope you enjoy using Inspo!
+
 
 ## Credits and acknowledgments
 First of all I want to say thank you for my mentor who reviews my numerous app ideas and push requests - [@togramago](https://github.com/togramago).
