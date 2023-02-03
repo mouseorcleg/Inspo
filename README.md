@@ -50,6 +50,10 @@ Any feedback is highly appreciated!
 
 <details>
   <summary>👾 and gifs 👾</summary>
+ 
+ ![start](https://user-images.githubusercontent.com/45575272/216650149-edd91c90-5e4a-4155-aef5-90a7191e31fb.gif)
+ ![2 screens dark mode](https://user-images.githubusercontent.com/45575272/216650205-76977043-2815-4550-8846-1c4e15831dbc.gif)
+ 
 </details>
 
 ## 📝 Credits and acknowledgements
