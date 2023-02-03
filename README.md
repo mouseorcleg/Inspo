@@ -28,7 +28,10 @@ The next update will feature the ability to request and cache a unique collectio
 📮 If you have ideas or recommendations about the features for this app - please don’t hesitate to reach out on Twitter [@mouse_or_cleg](https://twitter.com/mouse_or_cleg).
 Any feedback is highly appreciated!
 
-## Credits and acknowledgments
+## 📷 ScreenShots
+
+
+## 📝 Credits and acknowledgements
 First of all I want to say thank you for my mentor who reviews my numerous app ideas and push requests - [@togramago](https://github.com/togramago).
 
 I’m planning to use [Code with Enid](https://twitter.com/ios_dev_alb) as a reference material for this project and follow some of the steps in [@SwiftfulThinking](https://www.youtube.com/@SwiftfulThinking) guides on Youtube. I will add details as it goes.
