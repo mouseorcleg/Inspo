@@ -36,6 +36,7 @@ struct ContentView: View {
                         .cornerRadius(20)
                         .frame(maxWidth: 500, maxHeight: 400)
                         .padding(10)
+                        .shadow(radius: 10)
                         .onChange(of: viewModel.imageURL) { newValue in
                             isLoading = false
                         }
@@ -48,6 +49,7 @@ struct ContentView: View {
                             .resizable()
                             .scaledToFit()
                             .aspectRatio(contentMode: .fit)
+                            .shadow(radius: 10)
                     }
                 }
                 .offset(offset)
@@ -57,10 +59,12 @@ struct ContentView: View {
                 ZStack{
                     Circle()
                         .fill(Color.theme.accent)
+                        .shadow(radius: 40, x: 10, y: 20)
                         .overlay {
                             Text("PULL ME")
-                                .font(.title3)
-                                .foregroundColor(.primary)
+                                .fontWeight(.semibold)
+                                .fontWidth(.expanded)
+                                .foregroundColor(Color.theme.background)
                         }
                         .offset(offset)
                         .frame(height: circleSize)
