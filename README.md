@@ -1,6 +1,8 @@
 # Inspo
 
-Inspo is a simple app that provides you with a source of inspiration at your fingertips. With just one pull of a button, you’ll be able to see one randomly selected picture from the Harvard Museum collection. No extra information, just pure visual inspiration! 
+<img align="left" src="https://user-images.githubusercontent.com/45575272/216647355-1809e752-c46d-44a2-bd2e-ccd757c3d3f8.png" width="70" alt="app icon" > Inspo is a simple app that provides you with a source of inspiration at your fingertips. With just one pull of a button, you’ll be able to see one randomly selected picture from the Harvard Museum collection. No extra information, just pure visual inspiration! 
+
+![inspoHeader](https://user-images.githubusercontent.com/45575272/216647707-5b1b6d39-a449-46a0-b5d9-d02a4f1b6490.png)
 
 ## 📑 Table of content
 * [Technologies](#-technologies)
