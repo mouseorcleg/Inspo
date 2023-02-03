@@ -15,8 +15,11 @@ The Inspo app was created as an exercise set by my mentor to develop skills in w
 
 As an art historian, I saw the opportunity to provide users with a unique and memorable experience of exploring artwork. By using the [Harvard Art Museum API](https://harvardartmuseums.org/collections/api), Inspo allows users to discover art without any preconceived notions or additional information, giving them the chance to form their own opinions and interpretations. Whether you are an artist seeking inspiration or simply curious about the museum’s collection, Inspo provides an stress-free way to engage with art and discover something new.
 
-Hope you enjoy using Inspo!
+### 📱 Current status
 
+The current status of the app is that it is fully functional, allowing users to randomly load images from the Harvard Art Museum collection. It meets all the requirements established during the planning phase.
+
+However, there still is room for improvement and additional features in the future. [The Harvard Art Museum API](https://github.com/harvardartmuseums/api-docs) provides a wealth of resources, and I am eager to continue exploring the possibilities for working with images using SwiftUI.
 
 ## Credits and acknowledgments
 First of all I want to say thank you for my mentor who reviews my numerous app ideas and push requests - [@togramago](https://github.com/togramago).
