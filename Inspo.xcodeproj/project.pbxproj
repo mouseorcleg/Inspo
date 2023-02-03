@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		CB1C3ACF296200B700F92CA7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C3ACE296200B700F92CA7 /* Color.swift */; };
-		CB1C3AD32965C96900F92CA7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C3AD22965C96900F92CA7 /* DataModel.swift */; };
+		CB1C3AD32965C96900F92CA7 /* ImageDataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C3AD22965C96900F92CA7 /* ImageDataModels.swift */; };
 		CB1C3AD52965CD1900F92CA7 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C3AD42965CD1900F92CA7 /* ImageService.swift */; };
 		CB1C3AD72965D28500F92CA7 /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C3AD62965D28500F92CA7 /* ImageRepository.swift */; };
 		CB1C3AD92965D66C00F92CA7 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C3AD82965D66C00F92CA7 /* ContentViewModel.swift */; };
+		CB7D59712983F1AA00FF2ECC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7D59702983F1AA00FF2ECC /* LaunchScreen.storyboard */; };
 		CBB1F3EC295DBA5A009A743A /* InspoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB1F3EB295DBA5A009A743A /* InspoApp.swift */; };
 		CBB1F3EE295DBA5A009A743A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB1F3ED295DBA5A009A743A /* ContentView.swift */; };
 		CBB1F3F0295DBA63009A743A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB1F3EF295DBA63009A743A /* Assets.xcassets */; };
@@ -20,10 +21,12 @@
 
 /* Begin PBXFileReference section */
 		CB1C3ACE296200B700F92CA7 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		CB1C3AD22965C96900F92CA7 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		CB1C3AD22965C96900F92CA7 /* ImageDataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataModels.swift; sourceTree = "<group>"; };
 		CB1C3AD42965CD1900F92CA7 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		CB1C3AD62965D28500F92CA7 /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
 		CB1C3AD82965D66C00F92CA7 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		CB7D59702983F1AA00FF2ECC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CB7D5972298B076C00FF2ECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CBB1F3E8295DBA5A009A743A /* Inspo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inspo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB1F3EB295DBA5A009A743A /* InspoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspoApp.swift; sourceTree = "<group>"; };
 		CBB1F3ED295DBA5A009A743A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +46,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB7D596E2983F0C900FF2ECC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CB1C3AD42965CD1900F92CA7 /* ImageService.swift */,
+				CB1C3AD62965D28500F92CA7 /* ImageRepository.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CB7D596F2983F17500FF2ECC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CB1C3AD22965C96900F92CA7 /* ImageDataModels.swift */,
+				CB1C3ACE296200B700F92CA7 /* Color.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CBB1F3DF295DBA5A009A743A = {
 			isa = PBXGroup;
 			children = (
@@ -62,15 +83,15 @@
 		CBB1F3EA295DBA5A009A743A /* Inspo */ = {
 			isa = PBXGroup;
 			children = (
-				CB1C3AD42965CD1900F92CA7 /* ImageService.swift */,
-				CB1C3AD62965D28500F92CA7 /* ImageRepository.swift */,
-				CB1C3AD82965D66C00F92CA7 /* ContentViewModel.swift */,
-				CBB1F3ED295DBA5A009A743A /* ContentView.swift */,
-				CBB1F3EF295DBA63009A743A /* Assets.xcassets */,
-				CBB1F3F1295DBA63009A743A /* Inspo.entitlements */,
-				CB1C3AD22965C96900F92CA7 /* DataModel.swift */,
-				CB1C3ACE296200B700F92CA7 /* Color.swift */,
+				CB7D5972298B076C00FF2ECC /* Info.plist */,
 				CBB1F3EB295DBA5A009A743A /* InspoApp.swift */,
+				CB7D596E2983F0C900FF2ECC /* Networking */,
+				CBB1F3ED295DBA5A009A743A /* ContentView.swift */,
+				CB1C3AD82965D66C00F92CA7 /* ContentViewModel.swift */,
+				CB7D596F2983F17500FF2ECC /* Models */,
+				CBB1F3EF295DBA63009A743A /* Assets.xcassets */,
+				CB7D59702983F1AA00FF2ECC /* LaunchScreen.storyboard */,
+				CBB1F3F1295DBA63009A743A /* Inspo.entitlements */,
 				CBB1F3F2295DBA63009A743A /* Preview Content */,
 			);
 			path = Inspo;
@@ -112,7 +133,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					CBB1F3E7295DBA5A009A743A = {
 						CreatedOnToolsVersion = 14.1;
@@ -142,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB7D59712983F1AA00FF2ECC /* LaunchScreen.storyboard in Resources */,
 				CBB1F3F4295DBA63009A743A /* Preview Assets.xcassets in Resources */,
 				CBB1F3F0295DBA63009A743A /* Assets.xcassets in Resources */,
 			);
@@ -156,7 +178,7 @@
 			files = (
 				CBB1F3EE295DBA5A009A743A /* ContentView.swift in Sources */,
 				CB1C3AD72965D28500F92CA7 /* ImageRepository.swift in Sources */,
-				CB1C3AD32965C96900F92CA7 /* DataModel.swift in Sources */,
+				CB1C3AD32965C96900F92CA7 /* ImageDataModels.swift in Sources */,
 				CB1C3AD92965D66C00F92CA7 /* ContentViewModel.swift in Sources */,
 				CBB1F3EC295DBA5A009A743A /* InspoApp.swift in Sources */,
 				CB1C3AD52965CD1900F92CA7 /* ImageService.swift in Sources */,
@@ -200,6 +222,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -217,6 +240,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -258,6 +283,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -269,6 +295,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -282,21 +310,26 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Inspo/Inspo.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Inspo/Preview Content\"";
 				DEVELOPMENT_TEAM = FSX322285W;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Inspo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Find Inspo";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = NO;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = NO;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -323,21 +356,26 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Inspo/Inspo.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Inspo/Preview Content\"";
 				DEVELOPMENT_TEAM = FSX322285W;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Inspo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Find Inspo";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = NO;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = NO;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
