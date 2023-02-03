@@ -12,8 +12,8 @@ struct ContentView: View {
     @StateObject var viewModel: ContentViewModel = ContentViewModel()
     @State private var offset: CGSize = .zero
     @State private var isPulling: Bool = false
-    @State private var isFirstScreen: Bool = true
     @State private var isLoading: Bool = false
+    @State private var isFirstScreen: Bool = true
     
     var body: some View {
         
@@ -38,9 +38,6 @@ struct ContentView: View {
                         .onChange(of: viewModel.imageURL) { newValue in
                             isLoading = false
                         }
-                        .onAppear(perform: {
-                            isLoading = false
-                        })
                 } placeholder: {
                     ZStack{
                         if !isPulling && !isFirstScreen {
@@ -70,8 +67,9 @@ struct ContentView: View {
                             DragGesture()
                                 .onChanged({ value in
                                     isPulling = true
-                                    isFirstScreen = false
                                     isLoading = true
+                                    isFirstScreen = false
+                                    
                                     withAnimation(Animation
                                         .spring()
                                     ) {
