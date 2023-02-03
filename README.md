@@ -59,7 +59,9 @@ Discover the versatility of the app with this glimpse into the user experience. 
 
 </details>
 
-## 📝 Credits and acknowledgementsIn the development of this app, the Harvard Art Museum API with its brilliant [documentation](https://github.com/harvardartmuseums/api-docs) was a valuable resource. 
+## 📝 Credits and acknowledgements
+
+In the development of this app, the Harvard Art Museum API with it's brilliant [documentation](https://github.com/harvardartmuseums/api-docs) was a valuable resource. 
 
 The guidance provided by my mentor, [@togramago](https://github.com/togramago), was instrumental in ensuring the success of this project, from setting the task to reviewing the code and keeping me on track. 
 
