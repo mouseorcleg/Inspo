@@ -2,7 +2,7 @@
 
 Inspo is a simple app that provides you with a source of inspiration at your fingertips. With just one pull of a button, you’ll be able to see one randomly selected picture from the Harvard Museum collection. No information, just pure visual inspiration! 
 
-## 📑 Table of contents
+## 📑 Table of content
 * [Technologies](#-technologies)
 * [Roadmap](#-roadmap)
   * [Start of the journey](#%EF%B8%8F-start-of-the-journey)
@@ -47,6 +47,6 @@ First of all I want to say thank you for my mentor who reviews my numerous app i
 I’m planning to use [Code with Enid](https://twitter.com/ios_dev_alb) as a reference material for this project and follow some of the steps in [@SwiftfulThinking](https://www.youtube.com/@SwiftfulThinking) guides on Youtube. I will add details as it goes.
 
 ## ©️ License
-MIT license @mouseorcleg
-____
+MIT license [@mouseorcleg](https://github.com/mouseorcleg)
+- - - -
 👋 Say hello on [Twitter](https://twitter.com/mouse_or_cleg) or [LinkedIn](https://www.linkedin.com/in/maria-kharybina-b0993148/).
