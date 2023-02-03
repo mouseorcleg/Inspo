@@ -13,6 +13,7 @@ struct ContentView: View {
     @State private var offset: CGSize = .zero
     @State private var isPulling: Bool = false
     @State private var isFirstScreen: Bool = true
+    @State private var isLoading: Bool = false
     
     var body: some View {
         
@@ -35,10 +36,10 @@ struct ContentView: View {
                         .frame(maxWidth: 500, maxHeight: 400)
                         .padding(10)
                         .onChange(of: viewModel.imageURL) { newValue in
-                            isPulling = false
+                            isLoading = false
                         }
                         .onAppear(perform: {
-                            isPulling = false
+                            isLoading = false
                         })
                 } placeholder: {
                     ZStack{
@@ -70,6 +71,7 @@ struct ContentView: View {
                                 .onChanged({ value in
                                     isPulling = true
                                     isFirstScreen = false
+                                    isLoading = true
                                     withAnimation(Animation
                                         .spring()
                                     ) {
@@ -89,7 +91,7 @@ struct ContentView: View {
                                     withAnimation(.spring()) {
                                         offset = .zero
                                     }
-//                                    isPulling = false
+                                    isPulling = false
                                 })
                         )
                 }
