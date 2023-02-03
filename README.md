@@ -54,8 +54,10 @@ Discover the versatility of the app with this glimpse into the user experience. 
   <summary>👾 and gifs 👾</summary>
  
  ![start](https://user-images.githubusercontent.com/45575272/216650149-edd91c90-5e4a-4155-aef5-90a7191e31fb.gif)
+ ![2 screens + loading screen](https://user-images.githubusercontent.com/45575272/216653112-84583d0b-961f-445f-8655-95dc631d0eca.gif)
  ![2 screens dark mode](https://user-images.githubusercontent.com/45575272/216650205-76977043-2815-4550-8846-1c4e15831dbc.gif)
- 
+ ![many screens](https://user-images.githubusercontent.com/45575272/216653123-343f7499-3f2f-4abd-997e-5760d2a5df21.gif)
+
 </details>
 
 ## 📝 Credits and acknowledgements
