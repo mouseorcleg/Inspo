@@ -11,6 +11,7 @@ struct ContentView: View {
     
     @StateObject var viewModel: ContentViewModel = ContentViewModel()
     @State private var offset: CGSize = .zero
+    @State private var circleSize: CGFloat = 150
     @State private var isPulling: Bool = false
     @State private var isLoading: Bool = false
     @State private var isFirstScreen: Bool = true
@@ -56,13 +57,13 @@ struct ContentView: View {
                 ZStack{
                     Circle()
                         .fill(Color.theme.accent)
-                        .frame(height: 150)
                         .overlay {
-                            Text("Pull for inspo")
+                            Text("PULL ME")
                                 .font(.title3)
                                 .foregroundColor(.primary)
                         }
                         .offset(offset)
+                        .frame(height: circleSize)
                         .gesture(
                             DragGesture()
                                 .onChanged({ value in
@@ -70,15 +71,12 @@ struct ContentView: View {
                                     isLoading = true
                                     isFirstScreen = false
                                     
-                                    withAnimation(Animation
-                                        .spring()
-                                    ) {
-                                        let translation = value.translation
-                                        if translation.height > 0 {
-                                            let verticalTranslation = min(translation.height, 200)
-                                            withAnimation(.spring()) {
-                                                offset = CGSize(width: 0, height: verticalTranslation)
-                                            }
+                                    let translation = value.translation
+                                    if translation.height > 0 {
+                                        let verticalTranslation = min(translation.height, 200)
+                                        withAnimation(.spring()) {
+                                            offset = CGSize(width: 0, height: verticalTranslation)
+                                            circleSize = 100
                                         }
                                     }
                                 })
@@ -88,6 +86,7 @@ struct ContentView: View {
                                     }
                                     withAnimation(.spring()) {
                                         offset = .zero
+                                        circleSize = 150
                                     }
                                     isPulling = false
                                 })
