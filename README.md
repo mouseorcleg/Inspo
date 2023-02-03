@@ -42,6 +42,8 @@ Any feedback is highly appreciated!
 
 ## 📷 ScreenShots
 
+Discover the versatility of the app with this glimpse into the user experience. Don't miss out on the GIF section, where you can explore the Harvard Art Museum collection in a unique and dynamic way.
+
 <details>
     <summary>✨ amazing screenshots ✨</summary>
 <img height="400" alt="launch screen" src="https://user-images.githubusercontent.com/45575272/216648296-b8f7927e-39c1-43c1-b91f-edecc0aa1507.png"><img height="400" alt="first screen" src="https://user-images.githubusercontent.com/45575272/216649290-192d97ed-b5ba-4917-a68b-eeccef4dff45.png"><img height="400" alt="picture of the flowers inside the app's screen" src="https://user-images.githubusercontent.com/45575272/216648555-3f5cf96e-0dbf-4fc1-a9b4-125eb16a72cf.png"><img height="400" alt="japanese grafic inside the app's screen" src="https://user-images.githubusercontent.com/45575272/216648733-9515d334-4ddf-4b91-ad25-5e65701654df.png">
