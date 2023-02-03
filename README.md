@@ -59,10 +59,15 @@ Discover the versatility of the app with this glimpse into the user experience. 
 
 </details>
 
-## 📝 Credits and acknowledgements
-First of all I want to say thank you for my mentor who reviews my numerous app ideas and push requests - [@togramago](https://github.com/togramago).
+## 📝 Credits and acknowledgementsIn the development of this app, the Harvard Art Museum API with its brilliant [documentation](https://github.com/harvardartmuseums/api-docs) was a valuable resource. 
 
-I’m planning to use [Code with Enid](https://twitter.com/ios_dev_alb) as a reference material for this project and follow some of the steps in [@SwiftfulThinking](https://www.youtube.com/@SwiftfulThinking) guides on Youtube. I will add details as it goes.
+The guidance provided by my mentor, [@togramago](https://github.com/togramago), was instrumental in ensuring the success of this project, from setting the task to reviewing the code and keeping me on track. 
+
+I also wish to acknowledge the influence of the [@SwiftfulThinking](https://www.youtube.com/@SwiftfulThinking) channel, created by [Nick Sarno](https://github.com/SwiftfulThinking), which was a helpful source of information and inspiration throughout the process.
+
+Last but not least, I would like to extend my gratitude towards OpenAI and ChatGPT for providing valuable assistance with debugging and composing this ReadMe, contributing to the development of this app.
+
+P.S.: all graphics for this app were created using Canva.
 
 ## ©️ License
 MIT license [@mouseorcleg](https://github.com/mouseorcleg)
